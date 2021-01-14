@@ -18,7 +18,7 @@ const AboutSection = () => {
             <h2>for fun</h2>
           </div>
         </div>
-        <p> Contact with me for details about work or more... </p>
+        <p> Contact with me for details about work and more... </p>
         <button>Contact Me</button>
       </div>
       <div className="image">
