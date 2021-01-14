@@ -1,7 +1,12 @@
 import React from 'react'
+import AboutMe from './pages/AboutMe'
 
 function App() {
-  return <h1>Hello App</h1>
+  return (
+    <div>
+      <AboutMe />
+    </div>
+  )
 }
 
 export default App
