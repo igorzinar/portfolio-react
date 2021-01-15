@@ -84,7 +84,7 @@ function TechnologiesSection() {
 
           <Card>
             <div className="icon">
-              <img src={github} alt="github" />
+              <img className="bg-git" src={github} alt="github" />
               <h3>GitHub</h3>
             </div>
           </Card>
@@ -151,6 +151,11 @@ const Card = styled.div`
   }
   h3.npm {
     padding-top: 2.5rem;
+  }
+  img.bg-git {
+    background: #e9e9e9;
+
+    border-radius: 10%;
   }
 `
 export default TechnologiesSection
