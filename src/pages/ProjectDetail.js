@@ -17,13 +17,23 @@ const ProjectDetail = () => {
     const currentProject = projects.filter(
       (stateProject) => stateProject.url === url
     )
-    setProject(currentProject)
+    setProject(currentProject[0])
+    console.log(project)
   }, [projects, url])
   return (
-    <div>
-      <h1>Project Detail!!!!!!!!!!!!!!!!!</h1>
-    </div>
+    <>
+      {project && (
+        <Details>
+          <HeadLine>
+            <h2>{project.title}</h2>
+            <img src={project.mainImg} alt="" />
+          </HeadLine>
+        </Details>
+      )}
+    </>
   )
 }
 
+const Details = styled.div``
+const HeadLine = styled.div``
 export default ProjectDetail

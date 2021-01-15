@@ -29,7 +29,7 @@ export const ProjectState = () => {
       ],
     },
     {
-      title: 'Intelectual Game',
+      title: 'Intellectual Game',
       mainImg: quiz,
       url: '/projects/quiz',
       secondaryImg: quiz,
