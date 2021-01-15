@@ -6,6 +6,8 @@ import AboutMe from './pages/AboutMe'
 import Nav from './components/Nav'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
+import ProjectDetail from './pages/ProjectDetail'
+// Router
 import { Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -18,8 +20,11 @@ function App() {
         <Route path="/" exact>
           <AboutMe />
         </Route>
-        <Route path="/projects">
+        <Route path="/projects" exact>
           <Projects />
+        </Route>{' '}
+        <Route path="/projects/:id">
+          <ProjectDetail />
         </Route>
         <Route path="/contact">
           <Contact />
