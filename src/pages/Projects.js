@@ -6,9 +6,18 @@ import breakout from '../img/projects/Brekout.jpg'
 import quiz from '../img/projects/quiz.jpg'
 import imageGallery from '../img/projects/image-gallery.jpg'
 
+// Animations
+import { motion } from 'framer-motion'
+import { pageAnimation } from '../animation'
+
 const Projects = () => {
   return (
-    <StyledProjects>
+    <StyledProjects
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
       <Project>
         <h2>Breakout Game</h2>
         <div className="line"></div>
@@ -36,7 +45,7 @@ const Projects = () => {
   )
 }
 
-const StyledProjects = styled.div`
+const StyledProjects = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;

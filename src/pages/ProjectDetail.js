@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
 import { ProjectState } from '../ProjectState'
-
+// Animations
+import { motion } from 'framer-motion'
+import { pageAnimation } from '../animation'
 const ProjectDetail = () => {
   const history = useHistory()
   const url = history.location.pathname
@@ -23,7 +25,12 @@ const ProjectDetail = () => {
   return (
     <>
       {project && (
-        <Details>
+        <Details
+          exit="exit"
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+        >
           <HeadLine>
             <h2>{project.title}</h2>
             <img src={project.mainImg} alt="" />
@@ -46,7 +53,7 @@ const ProjectDetail = () => {
   )
 }
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: #fff;
 `
 const HeadLine = styled.div`

@@ -12,29 +12,34 @@ const AboutSection = () => {
   }
   const container = {
     hidden: { x: 100 },
-    show: { x: 0 },
+    show: {
+      x: 0,
+      transition: {
+        duration: 1,
+        ease: 'easeOut',
+        staggerChildren: 1,
+      },
+    },
   }
   return (
     <About>
       <Description>
         <motion.div
-          variant={container}
+          variants={container}
           initial="hidden"
           animate="show"
           className="title"
         >
           <Hide>
-            <motion.h2 variants={titleAnim} initial="hidden" animate="show">
-              I work to make
+            <motion.h2 variants={titleAnim}>I work to make</motion.h2>
+          </Hide>
+          <Hide>
+            <motion.h2 variants={titleAnim}>
+              cool <span> web app </span>
             </motion.h2>
           </Hide>
           <Hide>
-            <h2>
-              cool <span> web app </span>
-            </h2>
-          </Hide>
-          <Hide>
-            <h2>for fun</h2>
+            <motion.h2 variants={titleAnim}>for fun</motion.h2>
           </Hide>
         </motion.div>
         <p> Contact with me for details about work and more... </p>
