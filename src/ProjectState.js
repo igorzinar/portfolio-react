@@ -58,7 +58,7 @@ export const ProjectState = () => {
       secondaryImg: imageGallery,
       awards: [
         {
-          title: 'Are YOU want some really nice foto 🖼️🖼️🖼️ ',
+          title: 'Are YOU want some really nice photo 🖼️🖼️🖼️ ',
           description:
             '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
         },

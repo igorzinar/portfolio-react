@@ -12,7 +12,7 @@ const Projects = () => {
       <Project>
         <h2>Breakout Game</h2>
         <div className="line"></div>
-        <Link>
+        <Link to="/projects/breakout">
           <img src={breakout} alt="breakout" />
         </Link>
       </Project>
@@ -20,7 +20,7 @@ const Projects = () => {
       <Project>
         <h2>Image Gallery</h2>
         <div className="line"></div>
-        <Link>
+        <Link to="/projects/gallery">
           <img src={imageGallery} alt="imageGallery" />
         </Link>
       </Project>
@@ -28,7 +28,7 @@ const Projects = () => {
       <Project>
         <h2>Qiz Game</h2>
         <div className="line"></div>
-        <Link>
+        <Link to="/projects/quiz">
           <img src={quiz} alt="quiz" />
         </Link>
       </Project>

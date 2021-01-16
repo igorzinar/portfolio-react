@@ -1,15 +1,32 @@
 import React from 'react'
 import home1 from '../img/home1.png'
-import styled from 'styled-components'
 import { About, Description, Image, Hide } from '../styles'
 
+// Framer Motion
+import { motion } from 'framer-motion'
+
 const AboutSection = () => {
+  const titleAnim = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 2 } },
+  }
+  const container = {
+    hidden: { x: 100 },
+    show: { x: 0 },
+  }
   return (
     <About>
       <Description>
-        <div className="title">
+        <motion.div
+          variant={container}
+          initial="hidden"
+          animate="show"
+          className="title"
+        >
           <Hide>
-            <h2>I work to make</h2>
+            <motion.h2 variants={titleAnim} initial="hidden" animate="show">
+              I work to make
+            </motion.h2>
           </Hide>
           <Hide>
             <h2>
@@ -19,7 +36,7 @@ const AboutSection = () => {
           <Hide>
             <h2>for fun</h2>
           </Hide>
-        </div>
+        </motion.div>
         <p> Contact with me for details about work and more... </p>
         <button>Contact Me</button>
       </Description>
@@ -29,7 +46,5 @@ const AboutSection = () => {
     </About>
   )
 }
-
-//Styled Component
 
 export default AboutSection
