@@ -1,5 +1,5 @@
 import React from 'react'
-import home1 from '../img/home1.png'
+import portrait from '../img/portrait.jpg'
 import { About, Description, Image, Hide } from '../styles'
 import styled from 'styled-components'
 
@@ -31,7 +31,7 @@ const AboutSection = () => {
         <motion.button variants={fade}>Contact Me</motion.button>
       </Description>
       <Image>
-        <motion.img variants={photoAnim} src={home1} alt="home1" />
+        <motion.img variants={photoAnim} src={portrait} alt="home1" />
       </Image>
       <Wave />
       <Wave />
