@@ -8,7 +8,14 @@ import imageGallery from '../img/projects/image-gallery.jpg'
 
 // Animations
 import { motion } from 'framer-motion'
-import { pageAnimation } from '../animation'
+import {
+  pageAnimation,
+  fade,
+  photoAnim,
+  lineAnim,
+  slider,
+  sliderContainer,
+} from '../animation'
 
 const Projects = () => {
   return (
@@ -17,12 +24,21 @@ const Projects = () => {
       variants={pageAnimation}
       initial="hidden"
       animate="show"
+      style={{ background: '#fff' }}
     >
+      <motion.div variants={sliderContainer}>
+        <Frame1 variants={slider}></Frame1>
+        <Frame2 variants={slider}></Frame2>
+        <Frame3 variants={slider}></Frame3>
+        <Frame4 variants={slider}></Frame4>
+      </motion.div>
       <Project>
-        <h2>Breakout Game</h2>
-        <div className="line"></div>
+        <motion.h2 variants={fade}>Breakout Game</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/projects/breakout">
-          <img src={breakout} alt="breakout" />
+          <Hide>
+            <motion.img variants={photoAnim} src={breakout} alt="breakout" />
+          </Hide>
         </Link>
       </Project>
 
@@ -58,7 +74,7 @@ const Project = styled.div`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
-    background: #ccc;
+    background: #23d997;
     margin-bottom: 3rem;
   }
   img {
@@ -66,5 +82,29 @@ const Project = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+`
+
+const Hide = styled.div`
+  overflow: hidden;
+`
+
+// Frade Animation
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100vh;
+  background: #fffebf;
+  z-index: 2;
+`
+const Frame2 = styled(Frame1)`
+  background: #ff8efb;
+`
+const Frame3 = styled(Frame1)`
+  background: #8ed2ff;
+`
+const Frame4 = styled(Frame1)`
+  background: #8effa0;
 `
 export default Projects

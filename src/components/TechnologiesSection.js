@@ -9,11 +9,11 @@ import react from '../img/icons/react.png'
 import nodeJs from '../img/icons/nodejs.png'
 import git from '../img/icons/git.png'
 import github from '../img/icons/github.png'
-import home2 from '../img/home2.png'
 import styledComp from '../img/icons/styledComp.png'
 import reduxLy from '../img/icons/reduxLy.png'
 import npmP from '../img/icons/npmP.png'
 
+import technology from '../img/technology.jpg'
 // Styles
 import styled from 'styled-components'
 import { About, Description, Image } from '../styles'
@@ -110,7 +110,7 @@ function TechnologiesSection() {
         </Cards>
       </Description>
       <Image>
-        <img src={home2} alt="" />
+        <img src={technology} alt="" />
       </Image>
     </Technologies>
   )
