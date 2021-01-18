@@ -1,4 +1,5 @@
 import React from 'react'
+
 // Import icons
 import vsCode from '../img/icons/vs-code.png'
 import html from '../img/icons/html-5.png'
@@ -17,10 +18,20 @@ import technology from '../img/technology.jpg'
 // Styles
 import styled from 'styled-components'
 import { About, Description, Image } from '../styles'
+import { scrollReveal } from '../animation'
+
+// Scroll animation
+import { useScroll } from './useScroll'
 
 function TechnologiesSection() {
+  const [element, controls] = useScroll()
   return (
-    <Technologies>
+    <Technologies
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <Description>
         <h2>
           Only <span>best</span> technologies.

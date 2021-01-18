@@ -1,7 +1,6 @@
 import React from 'react'
 import portrait from '../img/portrait.jpg'
 import { About, Description, Image, Hide } from '../styles'
-import styled from 'styled-components'
 
 // Framer Motion
 import { motion } from 'framer-motion'

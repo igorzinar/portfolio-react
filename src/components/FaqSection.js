@@ -1,13 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { About } from '../styles'
 import Toggle from './Toggle'
 import { AnimateSharedLayout } from 'framer-motion'
+import { useScroll } from './useScroll'
+import { scrollReveal } from '../animation'
 
 function FaqSection() {
-  const [faqToggle, setFaqToggle] = useState(false)
+  const [element, controls] = useScroll()
   return (
-    <Faq>
+    <Faq
+      ref={element}
+      variants={scrollReveal}
+      initial="hidden"
+      animate={controls}
+    >
       <h2>
         Any Questions ? <span>FAQ</span>
       </h2>
@@ -25,7 +32,6 @@ function FaqSection() {
           </div>
         </Toggle>
         <Toggle title="Deferent Pay Methods">
-          <h4></h4>
           <div className="answer">
             <p>We start from </p>
             <p>Analyse the market and find solution </p>

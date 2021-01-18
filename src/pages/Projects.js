@@ -16,8 +16,11 @@ import {
   slider,
   sliderContainer,
 } from '../animation'
-
+import { useScroll } from '../components/useScroll'
 const Projects = () => {
+  const [element, controls] = useScroll()
+  const [element2, controls2] = useScroll()
+
   return (
     <StyledProjects
       exit="exit"
@@ -42,17 +45,27 @@ const Projects = () => {
         </Link>
       </Project>
 
-      <Project>
+      <Project
+      // ref={element}
+      // variants={fade}
+      // animate={controls}
+      // initial="hidden"
+      >
         <h2>Image Gallery</h2>
-        <div className="line"></div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/projects/gallery">
           <img src={imageGallery} alt="imageGallery" />
         </Link>
       </Project>
 
-      <Project>
+      <Project
+      // ref={element2}
+      // variants={fade}
+      // animate={controls2}
+      // initial="hidden"
+      >
         <h2>Qiz Game</h2>
-        <div className="line"></div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/projects/quiz">
           <img src={quiz} alt="quiz" />
         </Link>
@@ -70,7 +83,7 @@ const StyledProjects = styled(motion.div)`
     padding: 1rem 0;
   }
 `
-const Project = styled.div`
+const Project = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
@@ -88,7 +101,7 @@ const Hide = styled.div`
   overflow: hidden;
 `
 
-// Frade Animation
+// Frame Animation
 const Frame1 = styled(motion.div)`
   position: fixed;
   left: 0;
