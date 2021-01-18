@@ -16,11 +16,9 @@ import {
   slider,
   sliderContainer,
 } from '../animation'
-import { useScroll } from '../components/useScroll'
-const Projects = () => {
-  const [element, controls] = useScroll()
-  const [element2, controls2] = useScroll()
 
+import ScrollTop from '../components/ScrollTop'
+const Projects = () => {
   return (
     <StyledProjects
       exit="exit"
@@ -70,6 +68,7 @@ const Projects = () => {
           <img src={quiz} alt="quiz" />
         </Link>
       </Project>
+      <ScrollTop />
     </StyledProjects>
   )
 }

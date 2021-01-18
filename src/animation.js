@@ -89,3 +89,8 @@ export const scrollReveal = {
     transition: { duration: 1 },
   },
 }
+
+export const iconHover = {
+  hidden: {},
+  show: { scale: 1.2, color: ' #000', duration: 1 },
+}

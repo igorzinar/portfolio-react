@@ -13,7 +13,10 @@ font-family: 'Lobster', cursive; */
 body {
     background: #1b1b1b;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
+ 
+ 
 
 button {
     font-weight:bold;
@@ -61,5 +64,7 @@ button {
         line-height:150%;
     }
     font-size:1.4rem;
+
+
 `
 export default GlobalStyle
