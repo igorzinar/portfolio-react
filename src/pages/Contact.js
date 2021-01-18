@@ -61,27 +61,61 @@ const ContactStyle = styled(motion.div)`
   padding: 5rem 10rem;
   color: #353535;
   min-height: 90vh;
+  background: #fff;
+  background-size: cover;
+
+  @media (max-width: 750px) {
+    padding: 5rem 0 0 5rem;
+    margin: 0;
+  }
+  @media (max-width: 450px) {
+    padding: 1rem;
+    h2 {
+      font-size: 2rem;
+    }
+  }
 `
 const Title = styled(motion.div)`
   margin-bottom: 4rem;
   color: #000;
+  @media (max-width: 1300px) {
+    margin-top: 7rem;
+  }
+  @media (max-width: 1060px) {
+    font-size: 3rem;
+  }
+  @media (max-width: 400px) {
+    text-align: center;
+  }
 `
 
 const Hide = styled(motion.div)`
   overflow: hidden;
 `
 
-const Circle = styled.div`
-  border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
-  background: #353535;
-`
 const Social = styled(motion.div)`
   display: flex;
   align-items: center;
   transition: all 1s ease-out;
-
+  @media (max-width: 1060px) {
+    font-size: 3rem;
+    h2 {
+      font-size: 3rem;
+    }
+    i {
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 750px) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 450px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
   a {
     text-decoration: none;
     transition: all 0.75s ease-out;

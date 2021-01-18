@@ -1,8 +1,8 @@
 //Import Images
 
-import breakout from './img/projects/Brekout.jpg'
+import breakout from './img/projects/breakout.jpg'
 import quiz from './img/projects/quiz.jpg'
-import imageGallery from './img/projects/image-gallery.jpg'
+import imageGallery from './img/projects/gallery.jpg'
 
 export const ProjectState = () => {
   return [

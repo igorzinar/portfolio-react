@@ -86,7 +86,7 @@ export const scrollReveal = {
   show: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1 },
+    transition: { ease: 'easeOut', duration: 1 },
   },
 }
 

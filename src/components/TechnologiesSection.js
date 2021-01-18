@@ -18,7 +18,7 @@ import technology from '../img/technology.jpg'
 // Styles
 import styled from 'styled-components'
 import { About, Description, Image } from '../styles'
-import { scrollReveal } from '../animation'
+import { scrollReveal, fade } from '../animation'
 
 // Scroll animation
 import { useScroll } from './useScroll'
@@ -132,8 +132,10 @@ const Technologies = styled(About)`
     padding-bottom: 5rem;
   }
   p {
-    /* width: 50%; */
     padding: 2rem 0 4rem 0;
+  }
+  @media (max-width: 770px) {
+    justify-content: space-around;
   }
 `
 
@@ -145,6 +147,12 @@ const Cards = styled.div`
   img {
     width: 80px;
     margin-bottom: 2rem;
+  }
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
+  @media (max-width: 770px) {
+    justify-content: space-around;
   }
 `
 const Card = styled.div`

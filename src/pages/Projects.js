@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 // Images
-import breakout from '../img/projects/Brekout.jpg'
+import breakout from '../img/projects/breakout.jpg'
 import quiz from '../img/projects/quiz.jpg'
-import imageGallery from '../img/projects/image-gallery.jpg'
+import imageGallery from '../img/projects/gallery.jpg'
+import Hangman from '../img/projects/Hangman.jpg'
+import calculator from '../img/projects/calculator.jpg'
 
 // Animations
 import { motion } from 'framer-motion'
@@ -36,7 +38,7 @@ const Projects = () => {
       <Project>
         <motion.h2 variants={fade}>Breakout Game</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/projects/breakout">
+        <Link to="https//:igorzinar.com">
           <Hide>
             <motion.img variants={photoAnim} src={breakout} alt="breakout" />
           </Hide>
@@ -68,6 +70,32 @@ const Projects = () => {
           <img src={quiz} alt="quiz" />
         </Link>
       </Project>
+
+      <Project
+      // ref={element2}
+      // variants={fade}
+      // animate={controls2}
+      // initial="hidden"
+      >
+        <h2> Exchange Calculator </h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <Link to="/projects/quiz">
+          <img src={calculator} alt="quiz" />
+        </Link>
+      </Project>
+
+      <Project
+      // ref={element2}
+      // variants={fade}
+      // animate={controls2}
+      // initial="hidden"
+      >
+        <h2>Hangman Game</h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <Link to="/projects/quiz">
+          <img src={Hangman} alt="quiz" />
+        </Link>
+      </Project>
       <ScrollTop />
     </StyledProjects>
   )
@@ -77,6 +105,12 @@ const StyledProjects = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
+  /* @media (max-width: 1060px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  } */
 
   h2 {
     padding: 1rem 0;
@@ -84,6 +118,7 @@ const StyledProjects = styled(motion.div)`
 `
 const Project = styled(motion.div)`
   padding-bottom: 10rem;
+
   .line {
     height: 0.5rem;
     background: #23d997;
@@ -93,6 +128,20 @@ const Project = styled(motion.div)`
     width: 100%;
     height: 70vh;
     object-fit: cover;
+  }
+
+  @media (max-width: 1060px) {
+    img {
+    }
+  }
+
+  @media (max-width: 780px) {
+    h2 {
+      font-size: 3rem;
+    }
+    img {
+      height: 30vh;
+    }
   }
 `
 

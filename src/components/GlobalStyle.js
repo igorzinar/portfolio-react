@@ -9,6 +9,11 @@ font-family: 'Lobster', cursive; */
     padding:0;
     box-sizing:border-box;
 }
+html {
+    @media (max-width: 1600px) {
+        font-size: 80%;
+    }
+}
 
 body {
     background: #1b1b1b;
