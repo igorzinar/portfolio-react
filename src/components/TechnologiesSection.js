@@ -18,7 +18,7 @@ import technology from '../img/technology.jpg'
 // Styles
 import styled from 'styled-components'
 import { About, Description, Image } from '../styles'
-import { scrollReveal, fade } from '../animation'
+import { scrollReveal } from '../animation'
 
 // Scroll animation
 import { useScroll } from './useScroll'

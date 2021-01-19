@@ -90,6 +90,11 @@ const StyledNav = styled.nav`
     li {
       padding: 0;
     }
+    @media (max-width: 350px) {
+      ul {
+        align-items: stretch;
+      }
+    }
   }
 `
 const Line = styled(motion.div)`

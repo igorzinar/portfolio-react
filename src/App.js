@@ -6,7 +6,7 @@ import AboutMe from './pages/AboutMe'
 import Nav from './components/Nav'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
-import ProjectDetail from './pages/ProjectDetail'
+
 // Router
 import { Switch, Route, useLocation } from 'react-router-dom'
 // Animation

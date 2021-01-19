@@ -7,9 +7,10 @@ import FaqSection from '../components/FaqSection'
 import { motion } from 'framer-motion'
 import { pageAnimation } from '../animation'
 import ScrollTop from '../components/ScrollTop'
+import styled from 'styled-components'
 function AboutMe() {
   return (
-    <motion.div
+    <AboutContainer
       exit="exit"
       variants={pageAnimation}
       initial="hidden"
@@ -19,8 +20,11 @@ function AboutMe() {
       <TechnologiesSection />
       <FaqSection />
       <ScrollTop />
-    </motion.div>
+    </AboutContainer>
   )
 }
+const AboutContainer = styled(motion.div)`
+  overflow: hidden;
+`
 
 export default AboutMe

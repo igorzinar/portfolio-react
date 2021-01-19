@@ -20,36 +20,65 @@ const Contact = () => {
         <div>
           <Hide>
             <Social variants={titleAnim}>
-              <a href="mailto:igorzinar@gmail.com">
+              <a href="mailto:igorzinar@gmail.com" rel="noopener noreferrer">
                 <i className="fas fa-envelope fa-4x"></i>
               </a>
 
-              <a href="mailto:igorzinar@gmail.com">
+              <a href="mailto:igorzinar@gmail.com" rel="noopener noreferrer">
                 <h2>Email: igorzinar@gmail.com </h2>
               </a>
             </Social>
           </Hide>
           <Hide>
             <Social variants={titleAnim}>
-              <a href="https://www.linkedin.com/in/igor-zinar/">
+              <a
+                href="https://www.linkedin.com/in/igor-zinar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fab fa-linkedin fa-4x"> </i>
               </a>
 
-              <a href="https://www.linkedin.com/in/igor-zinar/">
+              <a
+                href="https://www.linkedin.com/in/igor-zinar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <h2>LinkedIn</h2>
               </a>
             </Social>
           </Hide>
           <Hide>
-            <Social variants={titleAnim}>
-              <a href="tel:0037377888902">
-                <i className="fas fa-phone-square-alt fa-4x"></i>
-              </a>
+            <Hide>
+              <Social variants={titleAnim}>
+                <a href="tel:0037377888902" rel="noopener noreferrer">
+                  <i className="fas fa-phone-square-alt fa-4x"></i>
+                </a>
+                <a href="tel:0037377888902" rel="noopener noreferrer">
+                  <h2>Phone: +37377888902 </h2>
+                </a>
+              </Social>
+            </Hide>
 
-              <a href="tel:0037377888902">
-                <h2>Phone: +37377888902 </h2>
-              </a>
-            </Social>
+            <Hide>
+              <Social variants={titleAnim}>
+                <a
+                  href="https://github.com/igorzinar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-github-square fa-4x"> </i>
+                </a>
+
+                <a
+                  href="https://github.com/igorzinar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h2>GitHub</h2>
+                </a>
+              </Social>
+            </Hide>
           </Hide>
         </div>
       </Title>
@@ -58,7 +87,7 @@ const Contact = () => {
 }
 
 const ContactStyle = styled(motion.div)`
-  padding: 5rem 10rem;
+  padding: 10rem 10rem;
   color: #353535;
   min-height: 90vh;
   background: #fff;

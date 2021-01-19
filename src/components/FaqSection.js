@@ -16,31 +16,36 @@ function FaqSection() {
       animate={controls}
     >
       <h2>
-        Any Questions ? <span>FAQ</span>
+        Let me tell you a few <span>things...</span>
       </h2>
       <AnimateSharedLayout>
-        <Toggle title="How Do I Start">
+        <Toggle title="Interests">
           <div className="answer">
-            <p>We start from </p>
-            <p>Analyse the market and find solution </p>
+            <p>I just love to code !!! </p>
+            <p>
+              {/* Every time when star a new project I think to add some new */}
+              technology{' '}
+            </p>
           </div>
         </Toggle>
-        <Toggle title="Daily Schedule">
+        <Toggle title="What Prefer">
           <div className="answer">
-            <p>We start from </p>
-            <p>Analyse the market and find solution </p>
+            <p>🌱 I’m currently learning everything 🤣 </p>
+            <p>
+              {/* It's so exited when you open some features in known technology{' '} */}
+            </p>
           </div>
         </Toggle>
-        <Toggle title="Deferent Pay Methods">
+        <Toggle title="Looking for...">
           <div className="answer">
-            <p>We start from </p>
-            <p>Analyse the market and find solution </p>
+            <p>👯 I’m looking to collaborate with other frontend developers </p>
+            <p></p>
           </div>
         </Toggle>
-        <Toggle title="What Product do you offer.">
+        <Toggle title="Goals">
           <div className="answer">
-            <p>We start from </p>
-            <p>Analyse the market and find solution </p>
+            <p> </p>
+            <p>🥅 2021 Goals: Contribute more to Open Source projects </p>
           </div>
         </Toggle>
       </AnimateSharedLayout>
