@@ -25,15 +25,15 @@ function App() {
           <Route path="/" exact>
             <AboutMe />
           </Route>
-          <Route path="/projects" exact>
+          <Route path="/projects">
             <Projects />
-          </Route>{' '}
-          <Route path="/projects/:id">
-            <ProjectDetail />
           </Route>
+          {/* <Route path="/projects/:id">
+            <ProjectDetail />
+          </Route> */}
           <Route path="/contact">
             <Contact />
-          </Route>{' '}
+          </Route>
         </Switch>
       </AnimatePresence>
     </div>

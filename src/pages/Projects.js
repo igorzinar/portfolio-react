@@ -38,11 +38,12 @@ const Projects = () => {
       <Project>
         <motion.h2 variants={fade}>Breakout Game</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="https//:igorzinar.com">
-          <Hide>
+
+        <Hide>
+          <a href="https://igorzinar.com" target="_blank">
             <motion.img variants={photoAnim} src={breakout} alt="breakout" />
-          </Hide>
-        </Link>
+          </a>
+        </Hide>
       </Project>
 
       <Project
@@ -53,9 +54,9 @@ const Projects = () => {
       >
         <h2>Image Gallery</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/projects/gallery">
+        <a href="https://igorzinar.com/projects/gallery" target="_blank">
           <img src={imageGallery} alt="imageGallery" />
-        </Link>
+        </a>
       </Project>
 
       <Project
